@@ -1,0 +1,129 @@
+第一阶段（现在）
+目标：低成本跑通
+模块	用什么
+rss_reader	Python
+ai_filter	本地Qwen14B
+ai_summarizer	Claude Haiku
+formatter	Python
+sender	Python
+
+第二阶段（产品化）
+目标：质量提升
+模块	用什么
+ai_filter	GPT-4o-mini
+ai_summarizer	Claude Sonnet
+
+第三阶段（真正Agent）
+目标：智能化
+
+增加：
+memory
+ranking
+trend analysis
+multi-agent
+
+九、为什么你现在还只是 pipeline？
+这个问题问得非常好。
+因为：这是 AI 行业现在一个很混乱的地方。
+你现在：是 AI Pipeline
+因为：
+流程是：固定的 线性的 预定义的
+即：
+RSS
+→ Filter
+→ Summarize
+→ Format
+→ Send
+
+每一步都是你提前写好的
+
+系统不会：
+自己决定下一步
+自己规划
+自己调用工具
+自己修改策略
+所以它还不是 Agent
+
+那它算不算 Skill？
+其实：非常像 Skill
+因为：Skill 的本质是：完成某个固定任务
+
+例如：
+“总结新闻”
+“搜索网页”
+“发送邮件”
+你的 DBA 现在其实是：
+一个复杂 Skill Pipeline
+或者：AI Workflow
+
+十、那什么才算真正的 Agent？
+Agent 最核心的东西：不是 LLM。
+而是：autonomy（自主性）
+
+即：
+系统自己决定：
+下一步做什么
+举个例子
+
+你现在：
+固定：
+先filter
+再summary
+
+但真正 Agent 会：
+“这条新闻重要性太高，
+我要额外搜索更多背景”
+
+然后：
+自动：
+调搜索工具
+查 Twitter
+查 Reddit
+重新组织内容
+这才开始接近 Agent
+
+十一、真正 Agent 的几个核心特征
+1. Tool Use
+会自己决定：什么时候调用工具
+
+2. Planning
+会：拆解任务
+例如：
+先搜索
+再验证
+再总结
+
+3. Memory
+记住：
+用户喜欢什么
+4. Reflection
+发现：结果不好
+然后：重新尝试
+
+5. Dynamic Routing
+根据情况：切换模型
+例如：
+简单新闻 → Haiku
+复杂分析 → Sonnet
+
+十二、你未来非常可能的发展路线
+你现在：
+Pipeline
+↓
+后面加：
+Ranking
+Trend analysis
+Topic clustering
+↓
+再加：
+Memory
+↓
+再加：
+Tool-using
+↓
+最后：才开始变成真正 Agent
+
+而且：
+你现在这个路线：其实是非常对的。
+因为：绝大多数成功AI产品都不是从Agent开始的
+而是：先做稳定 pipeline，再慢慢增加 autonomy
